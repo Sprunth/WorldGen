@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{49620F41-5C37-4C76-BCF8-AD061D6E02B9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Noise</RootNamespace>
+    <AssemblyName>libnoise</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interpolation.cs" />
+    <Compile Include="LatitudeLongitude.cs" />
+    <Compile Include="MathsUtils.cs" />
+    <Compile Include="Model\Cylinder.cs" />
+    <Compile Include="Model\Line.cs" />
+    <Compile Include="Model\Plane.cs" />
+    <Compile Include="Model\Sphere.cs" />
+    <Compile Include="Module\Abs.cs" />
+    <Compile Include="Module\Add.cs" />
+    <Compile Include="Module\Billow.cs" />
+    <Compile Include="Module\Blend.cs" />
+    <Compile Include="Module\Cache.cs" />
+    <Compile Include="Module\CheckerBoard.cs" />
+    <Compile Include="Module\Clamp.cs" />
+    <Compile Include="Module\Const.cs" />
+    <Compile Include="Module\Curve.cs" />
+    <Compile Include="Module\Cylinders.cs" />
+    <Compile Include="Module\Displace.cs" />
+    <Compile Include="Module\Exponent.cs" />
+    <Compile Include="Module\Invert.cs" />
+    <Compile Include="Module\Max.cs" />
+    <Compile Include="Module\Min.cs" />
+    <Compile Include="Module\Module.cs" />
+    <Compile Include="Module\Multiply.cs" />
+    <Compile Include="Module\Perlin.cs" />
+    <Compile Include="Module\Power.cs" />
+    <Compile Include="Module\RidgedMulti.cs" />
+    <Compile Include="Module\RotatePoint.cs" />
+    <Compile Include="Module\ScaleBias.cs" />
+    <Compile Include="Module\ScalePoint.cs" />
+    <Compile Include="Module\Select.cs" />
+    <Compile Include="Module\Spheres.cs" />
+    <Compile Include="Module\Terrace.cs" />
+    <Compile Include="Module\TranslatePoint.cs" />
+    <Compile Include="Module\Turbulence.cs" />
+    <Compile Include="Module\Voronoi.cs" />
+    <Compile Include="NoiseGeneration.cs" />
+    <Compile Include="NoiseQuality.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\GradientColour.cs" />
+    <Compile Include="Utils\ImageBuilder.cs" />
+    <Compile Include="Utils\NoiseMap.cs" />
+    <Compile Include="Utils\NoiseMapBuilder.cs" />
+    <Compile Include="Utils\PlanarNoiseMapBuilder.cs" />
+    <Compile Include="VectorTable.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
